@@ -54,4 +54,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void Btn_Refresh(View view) {
     }
+    public void onBackPressed(){
+        if(webViewMain.canGoBack()){
+            webViewMain.goBack();
+        }else{
+            super.onBackPressed();
+        }
+    }
 }
